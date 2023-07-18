@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logo_ottonova_bildmarke_azure_RGB.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Kundenformular</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kundenformular</h1>
+      <p>Bitte geben Sie unten Ihre Daten ein</p>
+      <form class="form">
+        <div class="form-element">
+          <label for="first_name">Name*</label>
+
+          <div class="field__element">
+            <input
+              name="first_name"
+              type="text"
+              maxlength="40"
+              class="form-field"
+              id="first_name"
+              required=""
+              placeholder="Otto"
+              aria-describedby="bouncer-error_first_name"
+              aria-invalid="true"
+              required=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="last_name">Surname*</label>
+          <div class="field__element">
+            <input
+              name="last_name"
+              type="text"
+              maxlength="80"
+              class="form-field"
+              id="last_name"
+              placeholder="Nova"
+              data-bouncer-target=".last-name-error-container"
+              required=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="email">Email*</label>
+          <div class="field__element">
+            <input
+              name="email"
+              type="email"
+              class="form-field"
+              id="email"
+              placeholder="otto@no.va"
+              data-bouncer-target=".email-error-container"
+              required=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="phone_number">Telefonnummer*</label>
+          <div class="field__element full">
+            <input
+              name="phone_number"
+              type="tel"
+              class="form-field"
+              id="phone_number"
+              data-bouncer-target=".phone-error-container"
+              minlength="6"
+              maxlength="18"
+              placeholder="0123 4567 8910"
+              required=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <label>Geschlecht*</label>
+          <div class="radio-input">
+            <label>
+              <input
+                value="value-1"
+                name="value-radio"
+                id="value-1"
+                type="radio"
+                checked=""
+              />
+              <lottie-player
+                id="clickPlayer1"
+                src="https://lottie.host/5b051cae-b24a-4945-8268-a73513ec3ea0/QiWTz40uL6.json"
+                background="transparent"
+                speed="1"
+                autoplay
+                style="width: 40px; height: 40px"
+                onclick="animateWavingHand1()"
+              ></lottie-player>
+            </label>
+            <label>
+              <input
+                value="value-2"
+                name="value-radio"
+                id="value-2"
+                type="radio"
+              />
+              <lottie-player
+                id="clickPlayer2"
+                src="https://lottie.host/f2c0ac6c-888e-4229-ac83-2d2662f9e9f3/Ji99YbsVRD.json"
+                background="transparent"
+                speed="0.8"
+                style="width: 40px; height: 40px"
+                onclick="animateWavingHand2()"
+              ></lottie-player>
+            </label>
+            <span class="selection"></span>
+          </div>
+        </div>
+
+        <small class="full">
+          Mit dem Abschicken meiner Daten erkläre ich meine
+          <a href="/">Einwilligung</a> zur Kontaktaufnahme durch ottonova.
+        </small>
+
+        <button type="submit" value="Absenden" class="btn full">
+          Abschicken
+          <svg>
+            <use xlink:href="/sprite.svg#btn-arrow" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./script.js"></script>
+    <!-- <script>
+      const clickPlayer1 = document.getElementById("clickPlayer1");
+      const clickPlayer2 = document.getElementById("clickPlayer2");
+
+      function animateWavingHand1() {
+        clickPlayer1.play();
+
+        clickPlayer1.goToAndStop(0);
+      }
+
+      function animateWavingHand2() {
+        clickPlayer2.play() && animateWavingHand1();
+      }
+
+      LottieInteractivity.create({
+        player: "#clickPlayer1",
+        mode: "cursor",
+        actions: [
+          {
+            type: "click",
+            forceFlag: false,
+          },
+        ],
+      });
+      LottieInteractivity.create({
+        player: "#clickPlayer2",
+        mode: "cursor",
+        actions: [
+          {
+            type: "click",
+            forceFlag: false,
+          },
+        ],
+      });
+    </script> -->
+  </body>
+</html>
